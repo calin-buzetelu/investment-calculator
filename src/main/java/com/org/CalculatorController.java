@@ -8,6 +8,6 @@ public class CalculatorController {
 
 	@RequestMapping("/")
 	public String showWelcomePage(){
-		return "index";
+		return "welcome";
 	}
 }
