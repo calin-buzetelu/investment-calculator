@@ -1,0 +1,19 @@
+body {
+    font-family:  Arial, Helvetica, sans-serif;
+    background: linear-gradient(#64e66a, #e25c5c);
+    color: #fff;
+    line-height: 1.6;
+    text-align: center;
+}
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+
+    background: whitesmoke;
+    color: slategrey;
+    border-radius: 25px;
+    padding: 10px;
+}
