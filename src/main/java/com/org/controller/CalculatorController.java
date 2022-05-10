@@ -15,4 +15,8 @@ public class CalculatorController {
 		model.addAttribute("dataEntry", dataEntry);
 		return "welcomePage";
 	}
+
+	@RequestMapping("/futureValue")
+	public String showFutureValue(Model model, @ModelAttribute("dataEntry") DataEntry dataEntry){
+	}
 }
