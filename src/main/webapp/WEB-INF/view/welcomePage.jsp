@@ -28,11 +28,14 @@
                 <br>
                 Number of contributions during the year: <form:input path="contributionRate"/>
                 <br>
+                Compounding periods: <form:input path="compoundPeriods"/>
+                <br>
                 Timespan of investment: <form:input path="time"/>
                 <br>
                 Projected return of the market: <form:input path="returnRate"/>
+                <br>
+                <input type="submit" value="Compute future value">
             </form:form>
-            <input type="submit" value="Start">
         </div>
     </div>
 </body>
