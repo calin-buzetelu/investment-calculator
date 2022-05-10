@@ -66,9 +66,8 @@ public class DataEntry {
 		this.returnRate = returnRate;
 	}
 
-//	ToDo
 	public double computeFutureValue(){
-		return 0;
+		return calculatorService.computeFutureValue(startAmount, contribution, contributionRate, compoundPeriods, time, returnRate);
 	}
 
 	@Override
