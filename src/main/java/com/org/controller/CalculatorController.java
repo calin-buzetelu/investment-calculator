@@ -16,7 +16,10 @@ public class CalculatorController {
 		return "welcomePage";
 	}
 
-	@RequestMapping("/futureValue")
+	@RequestMapping("/showFutureValue")
 	public String showFutureValue(Model model, @ModelAttribute("dataEntry") DataEntry dataEntry){
+		double futureValue = dataEntry.computeFutureValue();
+		model.addAttribute("futureValue", futureValue);
+		return "futureValueConfirmation";
 	}
 }
