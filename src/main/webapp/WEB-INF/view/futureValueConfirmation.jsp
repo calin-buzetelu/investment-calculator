@@ -19,6 +19,7 @@
             <b>The future value of your investment is:</b>
             <br>
             ${futureValue}
+            <br>
         </div>
     </div>
 </body>
