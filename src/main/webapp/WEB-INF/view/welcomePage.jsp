@@ -1,3 +1,4 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%--
   Created by IntelliJ IDEA.
   User: Calin
@@ -18,6 +19,19 @@
         <div class="content">
             <b>Welcome to the investment calculator!</b>
             <br>
+            <b>Please fill in the inputs of your projected investment:</b>
+            <br>
+            <form:form action="showFutureValue" modelAttribute="dataEntry">
+                Start amount: <form:input path="startAmount"/>
+                <br>
+                Contribution: <form:input path="contribution"/>
+                <br>
+                Number of contributions during the year: <form:input path="contributionRate"/>
+                <br>
+                Timespan of investment: <form:input path="time"/>
+                <br>
+                Projected return of the market: <form:input path="returnRate"/>
+            </form:form>
             <input type="submit" value="Start">
         </div>
     </div>
