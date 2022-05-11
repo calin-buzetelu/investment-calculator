@@ -3,14 +3,24 @@ package com.org.entity;
 
 import com.org.service.CalculatorService;
 
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+
 public class DataEntry {
 
-	private int startAmount;
-	private int contribution;
-	private int contributionRate;
-	private int compoundPeriods;
-	private int time;
-	private float returnRate;
+	@NotNull(message = "You have to specify the start amount of your investment...")
+	@Min(value = 0, message = "The minimum value has to be greater than 0...")
+	private Integer startAmount;
+	@NotNull(message = "not allowed")
+	private Integer contribution;
+	@NotNull(message = "not allowed")
+	private Integer contributionRate;
+	@NotNull(message = "not allowed")
+	private Integer compoundPeriods;
+	@NotNull(message = "not allowed")
+	private Integer time;
+	@NotNull(message = "not allowed")
+	private Float returnRate;
 
 	private CalculatorService calculatorService;
 
@@ -18,51 +28,51 @@ public class DataEntry {
 		calculatorService = new CalculatorService();
 	}
 
-	public int getStartAmount() {
+	public Integer getStartAmount() {
 		return startAmount;
 	}
 
-	public void setStartAmount(int startAmount) {
+	public void setStartAmount(Integer startAmount) {
 		this.startAmount = startAmount;
 	}
 
-	public int getContribution() {
+	public Integer getContribution() {
 		return contribution;
 	}
 
-	public void setContribution(int contribution) {
+	public void setContribution(Integer contribution) {
 		this.contribution = contribution;
 	}
 
-	public int getContributionRate() {
+	public Integer getContributionRate() {
 		return contributionRate;
 	}
 
-	public void setContributionRate(int contributionRate) {
+	public void setContributionRate(Integer contributionRate) {
 		this.contributionRate = contributionRate;
 	}
 
-	public int getCompoundPeriods() {
+	public Integer getCompoundPeriods() {
 		return compoundPeriods;
 	}
 
-	public void setCompoundPeriods(int compoundPeriods) {
+	public void setCompoundPeriods(Integer compoundPeriods) {
 		this.compoundPeriods = compoundPeriods;
 	}
 
-	public int getTime() {
+	public Integer getTime() {
 		return time;
 	}
 
-	public void setTime(int time) {
+	public void setTime(Integer time) {
 		this.time = time;
 	}
 
-	public float getReturnRate() {
+	public Float getReturnRate() {
 		return returnRate;
 	}
 
-	public void setReturnRate(float returnRate) {
+	public void setReturnRate(Float returnRate) {
 		this.returnRate = returnRate;
 	}
 
