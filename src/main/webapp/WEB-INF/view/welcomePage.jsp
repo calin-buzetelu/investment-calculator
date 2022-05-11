@@ -1,4 +1,3 @@
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%--
   Created by IntelliJ IDEA.
   User: Calin
@@ -7,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html>
 <head>
     <title>Investment Calculator</title>
@@ -23,6 +23,7 @@
             <br>
             <form:form action="showFutureValue" modelAttribute="dataEntry">
                 Start amount: <form:input path="startAmount"/>
+                <form:errors path="startAmount" cssClass="error"/>
                 <br>
                 Contribution: <form:input path="contribution"/>
                 <br>
