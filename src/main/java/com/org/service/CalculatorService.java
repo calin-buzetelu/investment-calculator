@@ -13,7 +13,8 @@ public class CalculatorService {
 	 * @param returnRate The forecasted return rate yoy
 	 * @return the future value of the investment
 	 */
-	public double computeFutureValue(int startAmount, int contribution, int contributionRate, int compoundPeriods, int time, float returnRate){
+	public double computeFutureValue(Integer startAmount, Integer contribution, Integer contributionRate,
+	                                 Integer compoundPeriods, Integer time, Float returnRate){
 		double futureValue = 0;
 		double principal = startAmount + contribution * contributionRate;
 		for (int i = 0; i < time; i++) {
