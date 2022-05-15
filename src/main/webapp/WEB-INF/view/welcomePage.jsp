@@ -23,17 +23,28 @@
             <br>
             <form:form action="showFutureValue" modelAttribute="dataEntry">
                 Start amount: <form:input path="startAmount"/>
+                <br>
                 <form:errors path="startAmount" cssClass="error"/>
                 <br>
                 Contribution: <form:input path="contribution"/>
                 <br>
-                Number of contributions during the year: <form:input path="contributionRate"/>
+                <form:errors path="contribution" cssClass="error"/>
+                <br>
+                Yearly contributions: <form:input path="contributionRate"/>
+                <br>
+                <form:errors path="contributionRate" cssClass="error"/>
                 <br>
                 Compounding periods: <form:input path="compoundPeriods"/>
                 <br>
+                <form:errors path="compoundPeriods" cssClass="error"/>
+                <br>
                 Timespan of investment: <form:input path="time"/>
                 <br>
+                <form:errors path="time" cssClass="error"/>
+                <br>
                 Projected return of the market: <form:input path="returnRate"/>
+                <br>
+                <form:errors path="returnRate" cssClass="error"/>
                 <br>
                 <input type="submit" value="Compute future value">
             </form:form>
