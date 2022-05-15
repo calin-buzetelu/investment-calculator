@@ -8,18 +8,26 @@ import javax.validation.constraints.NotNull;
 
 public class DataEntry {
 
-	@NotNull(message = "You have to specify the start amount of your investment...")
+	@NotNull(message = "Please specify the start amount of your investment...")
 	@Min(value = 0, message = "The minimum value has to be greater than 0...")
 	private Integer startAmount;
-	@NotNull(message = "not allowed")
+
+	@NotNull(message = "Please specify the forecasted contribution for your investment...")
 	private Integer contribution;
-	@NotNull(message = "not allowed")
+
+	@NotNull(message = "Please specify the contribution rate (in months) for your investment...")
+	@Min(value = 0, message = "The contribution rate has to be a positive number")
 	private Integer contributionRate;
-	@NotNull(message = "not allowed")
+
+	@NotNull(message = "Please specify the number of compounding periods within a year...")
+	@Min(value = 0, message = "The number of compounding periods has to be a positive number")
 	private Integer compoundPeriods;
-	@NotNull(message = "not allowed")
+
+	@NotNull(message = "Please specify the time period (in years) of your investment...")
+	@Min(value = 0, message = "The number of years has to be a positive number")
 	private Integer time;
-	@NotNull(message = "not allowed")
+
+	@NotNull(message = "Please specify the yearly expected return rate for your investment...")
 	private Float returnRate;
 
 	private CalculatorService calculatorService;
