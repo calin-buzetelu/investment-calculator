@@ -25,6 +25,11 @@
 		<property name="suffix" value=".jsp" />
 	</bean>
 
+	<bean id="messageSource"
+		  class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basenames" value="message"/>
+	</bean>
+
 	<!-- Add resources folder	-->
 	<mvc:resources location="/resources/" mapping="/resources/**"/>
 	
