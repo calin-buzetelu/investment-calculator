@@ -9,7 +9,6 @@
     <absolute-ordering />
 
     <!-- Spring MVC Configs -->
-
     <servlet>
         <servlet-name>dispatcher</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
