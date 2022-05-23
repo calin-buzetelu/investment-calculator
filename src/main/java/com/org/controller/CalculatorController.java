@@ -20,7 +20,9 @@ public class CalculatorController {
 	}
 
 	@RequestMapping("/showFutureValue")
-	public String showFutureValue(Model model, @Valid @ModelAttribute("dataEntry") DataEntry dataEntry, BindingResult bindingResult){
+	public String showFutureValue(Model model,
+	                              @Valid @ModelAttribute("dataEntry") DataEntry dataEntry,
+	                              BindingResult bindingResult){
 		if(bindingResult.hasErrors()){
 			return "welcomePage";
 		}
